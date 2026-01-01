@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] int health = 50;
+    [SerializeField] int health = 100;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -10,6 +10,7 @@ public class Health : MonoBehaviour
         if (damageDealer != null)
         {
             TakeDamage(damageDealer.GetDamage());
+            damageDealer.Hit();
         }
     }
 
