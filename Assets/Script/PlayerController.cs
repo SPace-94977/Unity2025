@@ -1,11 +1,12 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {  
+    [Header("Properties")]
     [SerializeField] float moveSpeed = 10f;
 
+    [Header("Padding")]
     [SerializeField] float leftBoundPadding;
     [SerializeField] float rightBoundPadding;
 

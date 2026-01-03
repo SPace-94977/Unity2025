@@ -33,6 +33,8 @@ public class Shooter : MonoBehaviour
     {
         while (true)
         {
+            yield return new WaitForSeconds(fireRate);
+            
             GameObject projectile = Instantiate(
                 projectilePrefab,
                 transform.position,
@@ -43,7 +45,6 @@ public class Shooter : MonoBehaviour
             rb.linearVelocity = Vector2.up * projectileSpeed;
 
             Destroy(projectile, projectileLifetime);
-            yield return new WaitForSeconds(fireRate);
         }
     }
 }

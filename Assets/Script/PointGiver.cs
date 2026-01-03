@@ -14,7 +14,7 @@ public class PointGiver : MonoBehaviour
     {
         if (collectSFX != null)
         {
-            AudioSource.PlayClipAtPoint(collectSFX, Camera.main.transform.position, 0.5f);
+            AudioSource.PlayClipAtPoint(collectSFX, Camera.main.transform.position, 0.3f);
         }
         
         Destroy(gameObject);
