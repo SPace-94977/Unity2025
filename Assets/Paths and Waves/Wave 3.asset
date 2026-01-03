@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Wave 3
   m_EditorClassIdentifier: Assembly-CSharp::WaveConfig
   enemyPrefabs:
-  - {fileID: 3579890036958588233, guid: 7e9f9a1f3f6fc7c4eb5a7a462dbc95a6, type: 3}
-  - {fileID: 3579890036958588233, guid: 7e9f9a1f3f6fc7c4eb5a7a462dbc95a6, type: 3}
-  pathPrefab: {fileID: 7666907771265641490, guid: 9b420509b254b394aa8d4f7a57f04e51, type: 3}
+  - {fileID: 3750117181207626823, guid: cc39ab7973710b9409801842ce10130c, type: 3}
+  - {fileID: 3750117181207626823, guid: cc39ab7973710b9409801842ce10130c, type: 3}
+  - {fileID: 3750117181207626823, guid: cc39ab7973710b9409801842ce10130c, type: 3}
+  - {fileID: 3750117181207626823, guid: cc39ab7973710b9409801842ce10130c, type: 3}
+  pathPrefab: {fileID: 8380834620067586871, guid: 5dffd2bc82047f04b87df46ccc72af3c, type: 3}
   enemyMoveSpeed: 4
   timeBetweenEnemySpawns: 1
   enemySpawnVariance: 0.3
