@@ -3,6 +3,7 @@ using UnityEngine;
 public class PointGiver : MonoBehaviour
 {
     [SerializeField] int points = 5;
+    [SerializeField] AudioClip collectSFX;
 
     public int GetPoints()
     {
@@ -11,6 +12,11 @@ public class PointGiver : MonoBehaviour
 
     public void Hit()
     {
+        if (collectSFX != null)
+        {
+            AudioSource.PlayClipAtPoint(collectSFX, Camera.main.transform.position, 0.5f);
+        }
+        
         Destroy(gameObject);
     }
 }

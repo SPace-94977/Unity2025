@@ -10,7 +10,6 @@ public class EnemySpawner : MonoBehaviour
     void Start()
     {
         StartCoroutine(SpawnEnemies());
-        
     }
 
     IEnumerator SpawnEnemies()
@@ -33,13 +32,10 @@ public class EnemySpawner : MonoBehaviour
             }  
 
         } while (isLooping);
-        
-
     }
 
     public WaveConfig GetCurrentWave()
     {
         return currentWave;
     }
-
 }

@@ -208,3 +208,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 5
+  collectSFX: {fileID: 8300000, guid: c7f0b81247c32784e9ed3aaa37f36986, type: 3}
