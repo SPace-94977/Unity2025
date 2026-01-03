@@ -171,8 +171,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.05}
-  m_Size: {x: 0.55, y: 0.65}
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.85, y: 1}
   m_Direction: 0
 --- !u!50 &2273795094145705720
 Rigidbody2D:
@@ -239,8 +239,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ab37c1c88466ce47a63a75928cd5ef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 0}
-  projectileSpeed: 10
+  projectilePrefab: {fileID: 2685712474572126299, guid: 4b8e7ee78af5a6c4e98b7f98ee220e6b, type: 3}
+  projectileSpeed: -12
   projectileLifetime: 3.5
-  fireRate: 0.2
-  isFiring: 0
+  fireRate: 0.5
+  isFiring: 1
