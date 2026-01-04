@@ -15,7 +15,7 @@ public class PointGiver : MonoBehaviour
         NextLevel nextLevel = GetComponent<NextLevel>();
         if (nextLevel != null)
         {
-            nextLevel.StarDestroyed();
+            nextLevel.StarCollected();
         }
 
         if (collectSFX != null)

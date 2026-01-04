@@ -113,7 +113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 100
   destroyOnCollision: 1
-  explosionPrefab: {fileID: 801847059270332049, guid: 7abe36ecb38346743a8772be4c4fdf7d, type: 3}
+  explosionPrefab: {fileID: 0}
 --- !u!1 &7942499627517547639
 GameObject:
   m_ObjectHideFlags: 0
