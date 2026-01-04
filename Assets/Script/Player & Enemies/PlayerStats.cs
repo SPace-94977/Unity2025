@@ -10,7 +10,6 @@ public class PlayerStats : MonoBehaviour
 
     Health playerHealth;
     Points playerPoints;
-
     Vector3 playerPos;
     bool hasDied = false;
 
