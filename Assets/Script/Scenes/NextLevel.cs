@@ -1,16 +1,20 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NextLevel : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    static int starsDestroyed = 0;
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField] int starsToAdvance = 10;
+    [SerializeField] Scene nextScene;
+
+    public void StarCollected()
     {
-        
+        starsDestroyed++;
+
+        if (starsDestroyed == starsToAdvance)
+        {
+            SceneManager.LoadScene(nextScene.name);
+        }
     }
 }

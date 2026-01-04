@@ -12,6 +12,12 @@ public class PointGiver : MonoBehaviour
 
     public void Hit()
     {
+        NextLevel nextLevel = GetComponent<NextLevel>();
+        if (nextLevel != null)
+        {
+            nextLevel.StarCollected();
+        }
+
         if (collectSFX != null)
         {
             AudioSource.PlayClipAtPoint(collectSFX, Camera.main.transform.position, 0.25f);

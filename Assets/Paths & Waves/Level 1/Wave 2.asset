@@ -22,4 +22,4 @@ MonoBehaviour:
   enemyMoveSpeed: 9
   timeBetweenEnemySpawns: 0.5
   enemySpawnVariance: 0.4
-  minimumSpawnTime: 0.2
+  minimumSpawnTime: 0.4

@@ -5,7 +5,8 @@ public class MainMenu : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene(1);  // Load Level scene [ID 1]
+        PlayerStats.hasDied = false;
+        SceneManager.LoadScene(1);  // Load Level 1 scene [ID 1]
     }
 
     public void QuitGame()

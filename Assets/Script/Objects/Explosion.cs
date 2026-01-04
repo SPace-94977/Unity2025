@@ -20,7 +20,7 @@ public class Explosion : MonoBehaviour
 
         if (explosionSFX != null)
         {
-            AudioSource.PlayClipAtPoint(explosionSFX, Camera.main.transform.position, 0.5f);
+            AudioSource.PlayClipAtPoint(explosionSFX, Camera.main.transform.position, 0.2f);
         }
     }
 
@@ -32,11 +32,15 @@ public class Explosion : MonoBehaviour
         {
             timer = 0f;
             currentFrame++;
-
+            
             if (currentFrame == explosionFrames.Length)
             {
                 Destroy(gameObject);
-                SceneManager.LoadScene(2);
+
+                if (PlayerStats.hasDied)
+                {
+                    SceneManager.LoadScene(2);  // Game Over Scene [ID 2]
+                }
             }
             else
             {

@@ -11,7 +11,7 @@ public class PlayerStats : MonoBehaviour
     Health playerHealth;
     Points playerPoints;
     Vector3 playerPos;
-    bool hasDied = false;
+    public static bool hasDied = false;
 
     private void Start()
     {
@@ -53,8 +53,6 @@ public class PlayerStats : MonoBehaviour
     {
         if (player == null && hasDied == false)
         {
-            hasDied = true;
-
             if (explosionPrefab != null)
             {
                 Instantiate(
@@ -63,6 +61,7 @@ public class PlayerStats : MonoBehaviour
                     Quaternion.identity
                 );
             }
+            hasDied = true;
         }
     }
 }
