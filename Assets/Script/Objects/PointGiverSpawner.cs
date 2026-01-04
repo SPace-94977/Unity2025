@@ -61,6 +61,7 @@ public class PointGiverSpawner : MonoBehaviour
     IEnumerator SpawnContinuously()
     {
         NextLevel nextLevel = GetComponent<NextLevel>();
+
         while (true)
         {
             float waitTime = Random.Range(minimumSpawnTime, maximumSpawnTime);
@@ -78,8 +79,18 @@ public class PointGiverSpawner : MonoBehaviour
                 rb.linearVelocity = Vector2.down * fallSpeed;
             }
 
-            Destroy(pointGiver, pointGiverLifetime);
-            nextLevel.StarDestroyed();
+            // Start a coroutine to handle destruction + notifying next level
+            StartCoroutine(DestroyPointGiverAfterTime(pointGiver, nextLevel));
         }
+    }
+
+    IEnumerator DestroyPointGiverAfterTime(GameObject pointGiver, NextLevel nextLevel)
+    {
+        yield return new WaitForSeconds(pointGiverLifetime);
+
+        if (pointGiver != null)
+            Destroy(pointGiver);
+
+        nextLevel.StarDestroyed();
     }
 }
