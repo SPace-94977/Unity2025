@@ -39,7 +39,7 @@ public class Explosion : MonoBehaviour
 
                 if (PlayerStats.hasDied)
                 {
-                    SceneManager.LoadScene(2);  // Game Over Scene [ID 2]
+                    SceneManager.LoadScene(3);  // Game Over Scene [ID 3]
                 }
             }
             else
