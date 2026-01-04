@@ -6,15 +6,15 @@ public class NextLevel : MonoBehaviour
     static int starsDestroyed = 0;
 
     [SerializeField] int starsToAdvance = 10;
-    [SerializeField] Scene nextScene;
+    [SerializeField] int nextSceneID;
 
-    public void StarCollected()
+    public void StarDestroyed()
     {
         starsDestroyed++;
 
         if (starsDestroyed == starsToAdvance)
         {
-            SceneManager.LoadScene(nextScene.name);
+            SceneManager.LoadScene(nextSceneID);
         }
     }
 }

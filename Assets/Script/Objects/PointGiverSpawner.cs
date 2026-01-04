@@ -60,6 +60,7 @@ public class PointGiverSpawner : MonoBehaviour
 
     IEnumerator SpawnContinuously()
     {
+        NextLevel nextLevel = GetComponent<NextLevel>();
         while (true)
         {
             float waitTime = Random.Range(minimumSpawnTime, maximumSpawnTime);
@@ -78,6 +79,7 @@ public class PointGiverSpawner : MonoBehaviour
             }
 
             Destroy(pointGiver, pointGiverLifetime);
+            nextLevel.StarDestroyed();
         }
     }
 }
