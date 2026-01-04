@@ -59,7 +59,7 @@ public class PlayerStats : MonoBehaviour
             {
                 Instantiate(
                     explosionPrefab,
-                    playerPos,  // ISSUE: player is null by now
+                    playerPos,
                     Quaternion.identity
                 );
             }

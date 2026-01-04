@@ -4,11 +4,17 @@ public class Health : MonoBehaviour
 {
     [SerializeField] int health = 100;
 
+    private void Start()
+    {
+        GameSession.PlayerHealth = health;
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         DamageDealer damageDealer = other.GetComponent<DamageDealer>();
         if (damageDealer != null)
         {
+            GameSession.PlayerHealth = health;
             TakeDamage(damageDealer.GetDamage());
             damageDealer.Hit();
         }
